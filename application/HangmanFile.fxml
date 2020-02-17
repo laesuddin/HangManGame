@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="623.0" prefWidth="400.0" style="-fx-background-color: #666666;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HangmanController">
+   <children>
+      <VBox layoutY="75.0" prefHeight="622.0" prefWidth="384.0">
+         <children>
+            <BorderPane fx:id="mainBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="541.0" prefWidth="400.0" style="-fx-background-color: #000000;">
+               <bottom>
+                  <VBox BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox spacing="2.0">
+                           <children>
+                              <Region HBox.hgrow="ALWAYS" />
+                              <JFXButton fx:id="qBut" minHeight="-Infinity" minWidth="-Infinity" onAction="#keyboardAction" prefHeight="30.0" prefWidth="30.0" styleClass="keyboardButtons" stylesheets="@application.css" text="Q" textFill="#b3edff">
+                                 <HBox.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="wBut" layoutX="180.0" layoutY="15.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#keyboardAction" prefHeight="30.0" prefWidth="30.0" styleClass="keyboardButtons" stylesheets="@application.css" text="W" textFill="#b3edff">
+                                 <HBox.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="eBut" layoutX="195.0" layoutY="15.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#keyboardAction" prefHeight="30.0" prefWidth="30.0" styleClass="keyboardButtons" stylesheets="@application.css" text="E" textFill="#b3edff">
+                                 <HBox.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="rBut" layoutX="165.0" layoutY="15.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#keyboardAction" prefHeight="30.0" prefWidth="30.0" styleClass="keyboardButtons" stylesheets="@application.css" text="R" textFill="#b3edff">
+                                 <HBox.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="tBut" layoutX="169.0" layoutY="15.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#keyboardAction" prefHeight="30.0" prefWidth="30.0" styleClass="keyboardButtons" stylesheets="@application.css" text="T" textFill="#b3edff">
+                                 <HBox.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="yBut" layoutX="197.0" layoutY="15.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#keyboardAction" prefHeight="30.0" prefWidth="30.0" styleClass="keyboardButtons" stylesheets="@application.css" text="Y" textFill="#b3edff">
+                                 <HBox.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="uBut" layoutX="223.0" layoutY="15.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#keyboardAction" prefHeight="30.0" prefWidth="30.0" styleClass="keyboardButtons" stylesheets="@application.css" text="U" textFill="#b3edff">
+                                 <HBox.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="iBut" layoutX="139.0" layoutY="15.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#keyboardAction" prefHeight="30.0" prefWidth="30.0" styleClass="keyboardButtons" stylesheets="@application.css" text="I" textFill="#b3edff">
+                                 <HBox.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="oBut" layoutX="275.0" layoutY="15.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#keyboardAction" prefHeight="30.0" prefWidth="30.0" styleClass="keyboardButtons" stylesheets="@application.css" text="O" textFill="#b3edff">
+                                 <HBox.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="pBut" layoutX="249.0" layoutY="15.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#keyboardAction" prefHeight="30.0" prefWidth="30.0" styleClass="keyboardButtons" stylesheets="@application.css" text="P" textFill="#b3edff">
+                                 <HBox.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <Region HBox.hgrow="ALWAYS" />
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="10.0" spacing="2.0">
+                           <children>
+                              <Region HBox.hgrow="ALWAYS" />
+                              <JFXButton fx:id="aBut" minHeight="-Infinity" minWidth="-Infinity" onAction="#keyboardAction" prefHeight="30.0" prefWidth="30.0" styleClass="keyboardButtons" stylesheets="@application.css" text="A" textFill="#b3edff">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="sBut" minHeight="-Infinity" minWidth="-Infinity" onAction="#keyboardAction" prefHeight="30.0" prefWidth="30.0" styleClass="keyboardButtons" stylesheets="@application.css" text="S" textFill="#b3edff">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="dBut" minHeight="-Infinity" minWidth="-Infinity" onAction="#keyboardAction" prefHeight="30.0" prefWidth="30.0" styleClass="keyboardButtons" stylesheets="@application.css" text="D" textFill="#b3edff">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="fBut" minHeight="-Infinity" minWidth="-Infinity" onAction="#keyboardAction" prefHeight="30.0" prefWidth="30.0" styleClass="keyboardButtons" stylesheets="@application.css" text="F" textFill="#b3edff">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="gBut" minHeight="-Infinity" minWidth="-Infinity" onAction="#keyboardAction" prefHeight="30.0" prefWidth="30.0" styleClass="keyboardButtons" stylesheets="@application.css" text="G" textFill="#b3edff">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="hBut" minHeight="-Infinity" minWidth="-Infinity" onAction="#keyboardAction" prefHeight="30.0" prefWidth="30.0" styleClass="keyboardButtons" stylesheets="@application.css" text="H" textFill="#b3edff">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="jBut" minHeight="-Infinity" minWidth="-Infinity" onAction="#keyboardAction" prefHeight="30.0" prefWidth="30.0" styleClass="keyboardButtons" stylesheets="@application.css" text="J" textFill="#b3edff">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="kBut" minHeight="-Infinity" minWidth="-Infinity" onAction="#keyboardAction" prefHeight="30.0" prefWidth="30.0" styleClass="keyboardButtons" stylesheets="@application.css" text="K" textFill="#b3edff">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="lBut" minHeight="-Infinity" minWidth="-Infinity" onAction="#keyboardAction" prefHeight="30.0" prefWidth="30.0" styleClass="keyboardButtons" stylesheets="@application.css" text="L" textFill="#b3edff">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <Region HBox.hgrow="ALWAYS" />
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="110.0" spacing="2.0">
+                           <children>
+                              <Region HBox.hgrow="ALWAYS" />
+                              <JFXButton fx:id="zBut" minHeight="-Infinity" minWidth="-Infinity" onAction="#keyboardAction" prefHeight="30.0" prefWidth="30.0" styleClass="keyboardButtons" stylesheets="@application.css" text="Z" textFill="#b3edff">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton minHeight="-Infinity" minWidth="-Infinity" onAction="#keyboardAction" prefHeight="30.0" prefWidth="30.0" styleClass="keyboardButtons" stylesheets="@application.css" text="X" textFill="#b3edff" fx:id="xBut">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="cBut" minHeight="-Infinity" minWidth="-Infinity" onAction="#keyboardAction" prefHeight="30.0" prefWidth="30.0" styleClass="keyboardButtons" stylesheets="@application.css" text="C" textFill="#b3edff">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="vBut" minHeight="-Infinity" minWidth="-Infinity" onAction="#keyboardAction" prefHeight="30.0" prefWidth="30.0" styleClass="keyboardButtons" stylesheets="@application.css" text="V" textFill="#b3edff">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="bBut" minHeight="-Infinity" minWidth="-Infinity" onAction="#keyboardAction" prefHeight="30.0" prefWidth="30.0" styleClass="keyboardButtons" stylesheets="@application.css" text="B" textFill="#b3edff">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="nBut" minHeight="-Infinity" minWidth="-Infinity" onAction="#keyboardAction" prefHeight="30.0" prefWidth="30.0" styleClass="keyboardButtons" stylesheets="@application.css" text="N" textFill="#b3edff">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="mBut" minHeight="-Infinity" minWidth="-Infinity" onAction="#keyboardAction" prefHeight="30.0" prefWidth="30.0" styleClass="keyboardButtons" stylesheets="@application.css" text="M" textFill="#b3edff">
+                                 <font>
+                                    <Font name="Lucida Sans Typewriter Regular" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <Region HBox.hgrow="ALWAYS" />
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" />
+                     </padding>
+                  </VBox>
+               </bottom>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <center>
+                  <BorderPane prefHeight="412.0" prefWidth="406.0" BorderPane.alignment="CENTER">
+                     <center>
+                        <ImageView fx:id="hangmanImage" fitHeight="300.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" translateY="10.0" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../images/hangman1.jpg" />
+                           </image>
+                           <BorderPane.margin>
+                              <Insets bottom="5.0" />
+                           </BorderPane.margin>
+                        </ImageView>
+                     </center>
+                     <bottom>
+                        <HBox>
+                           <children>
+                              <Region HBox.hgrow="ALWAYS" />
+                              <Label fx:id="wordToGuess" prefHeight="57.0" textFill="WHITE" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="30.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="10.0" />
+                                 </padding>
+                              </Label>
+                              <Region HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                     </bottom>
+                  </BorderPane>
+               </center>
+               <top>
+                  <HBox fx:id="startButtonHBox" prefHeight="0.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <JFXButton fx:id="startButton" alignment="CENTER" onAction="#startButtonClicked" prefHeight="57.0" prefWidth="216.0" styleClass="startButton" stylesheets="@application.css" text="Start Game" textAlignment="CENTER" textFill="WHITE" translateY="105.0" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </JFXButton>
+                        <Region HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </top>
+            </BorderPane>
+         </children>
+      </VBox>
+   </children>
+</Pane>
